@@ -20,7 +20,7 @@ function App() {
 <section
   className="relative bg-cover bg-center h-[600px] flex items-center justify-center text-white"
   style={{
-    backgroundImage: "url('https://img.lovepik.com/bg/20240406/3D-Background-Illustration-Showcasing-Empty-Store-Shelves_5801335_wh860.jpg')"
+    backgroundImage: "url('https://t3.ftcdn.net/jpg/09/47/24/02/360_F_947240266_vILwmKGTvRMeF5qUI3JdmafagYMSBj69.jpg')"
   }}
 >
   {/* Dark overlay */}
