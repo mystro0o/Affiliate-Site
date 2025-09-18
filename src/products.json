@@ -1,26 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Sony WH-1000XM5",
-    "price": "$398",
-    "description": "Industry-leading noise-canceling wireless headphones with 30h battery life.",
-    "image": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg",
+    "name": "Sony WH-1000XM5 Wireless Headphones",
+    "price": "$348",
+    "image": "https://m.media-amazon.com/images/I/61d5F7h33uL._AC_SL1500_.jpg",
     "link": "https://www.amazon.com/dp/B09XS7JWHH?tag=your-affiliate-id"
   },
   {
     "id": 2,
-    "name": "Apple Watch Series 9",
-    "price": "$399",
-    "description": "Advanced health tracking, GPS, and sleek design for everyday use.",
-    "image": "https://m.media-amazon.com/images/I/61v7p3xqRCL._AC_SL1500_.jpg",
-    "link": "https://www.amazon.com/dp/B0CHX1DDG2?tag=your-affiliate-id"
+    "name": "Logitech MX Master 3S Wireless Mouse",
+    "price": "$99",
+    "image": "https://m.media-amazon.com/images/I/61ni3t1ryQL._AC_SL1500_.jpg",
+    "link": "https://www.amazon.com/dp/B09HM94VDS?tag=your-affiliate-id"
   },
   {
     "id": 3,
-    "name": "Razer Huntsman V2",
-    "price": "$149",
-    "description": "Mechanical gaming keyboard with ultra-fast optical switches & RGB lighting.",
-    "image": "https://m.media-amazon.com/images/I/81gC7frRJyL._AC_SL1500_.jpg",
-    "link": "https://www.amazon.com/dp/B08T1JZ7YV?tag=your-affiliate-id"
+    "name": "Apple iPad 10th Generation (2022)",
+    "price": "$449",
+    "image": "https://m.media-amazon.com/images/I/61uA2UVnYWL._AC_SL1500_.jpg",
+    "link": "https://www.amazon.com/dp/B0BJLF2BRM?tag=your-affiliate-id"
   }
 ]
