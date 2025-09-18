@@ -1,92 +1,82 @@
 import React from "react";
+import products from "./products.json";
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Navbar */}
-      <nav className="bg-white shadow-md p-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-blue-600">Affiliate Hub</h1>
-        <ul className="flex gap-6 text-gray-700">
-          <li><a href="#home" className="hover:text-blue-600">Home</a></li>
-          <li><a href="#products" className="hover:text-blue-600">Products</a></li>
-          <li><a href="#about" className="hover:text-blue-600">About</a></li>
-          <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
-        </ul>
+      <nav className="bg-white shadow-md sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-indigo-600">My Affiliate Store</h1>
+          <ul className="hidden md:flex space-x-6 font-medium">
+            <li><a href="#home" className="hover:text-indigo-600">Home</a></li>
+            <li><a href="#about" className="hover:text-indigo-600">About</a></li>
+            <li><a href="#products" className="hover:text-indigo-600">Products</a></li>
+            <li><a href="#contact" className="hover:text-indigo-600">Contact</a></li>
+          </ul>
+        </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="text-center py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-        <h2 className="text-4xl font-bold mb-4">Find the Best Deals Online</h2>
-        <p className="text-lg mb-6">Handpicked affiliate products to save you time & money.</p>
-        <a href="#products" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-200">
-          Shop Now
+      <section id="home" className="bg-indigo-600 text-white py-20 text-center">
+        <h1 className="text-5xl font-extrabold mb-4">Shop Smarter with Us</h1>
+        <p className="text-lg mb-6">Exclusive deals on top products — all in one place.</p>
+        <a
+          href="#products"
+          className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-200 transition"
+        >
+          Start Shopping
         </a>
       </section>
 
-      {/* Product Grid */}
-      <section id="products" className="py-16 px-6">
-        <h3 className="text-3xl font-bold text-center mb-10">Featured Products</h3>
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Product 1 */}
-          <div className="bg-white rounded-xl shadow-md p-4">
-            <img src="https://via.placeholder.com/300" alt="Product 1" className="rounded-lg mb-4" />
-            <h4 className="text-lg font-semibold">Product 1</h4>
-            <p className="text-gray-600 mb-2">$49.99</p>
-            <a
-              href="https://www.amazon.com/dp/B07GBZ4Q68?tag=your-affiliate-id"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg inline-block hover:bg-blue-700"
-              target="_blank" rel="noopener noreferrer"
-            >
-              Buy Now
-            </a>
-          </div>
+      {/* About Section */}
+      <section id="about" className="py-16 px-6 bg-gray-100 text-center">
+        <h2 className="text-3xl font-bold mb-6">About Us</h2>
+        <p className="max-w-3xl mx-auto text-gray-700 text-lg">
+          We bring you the best affiliate products at unbeatable prices.
+          Our mission is to help you discover high-quality deals without wasting time searching.
+        </p>
+      </section>
 
-          {/* Product 2 */}
-          <div className="bg-white rounded-xl shadow-md p-4">
-            <img src="https://via.placeholder.com/300" alt="Product 2" className="rounded-lg mb-4" />
-            <h4 className="text-lg font-semibold">Product 2</h4>
-            <p className="text-gray-600 mb-2">$79.99</p>
-            <a
-              href="https://www.amazon.com/dp/B09XX?tag=your-affiliate-id"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg inline-block hover:bg-blue-700"
-              target="_blank" rel="noopener noreferrer"
-            >
-              Buy Now
-            </a>
-          </div>
-
-          {/* Product 3 */}
-          <div className="bg-white rounded-xl shadow-md p-4">
-            <img src="https://via.placeholder.com/300" alt="Product 3" className="rounded-lg mb-4" />
-            <h4 className="text-lg font-semibold">Product 3</h4>
-            <p className="text-gray-600 mb-2">$99.99</p>
-            <a
-              href="https://www.amazon.com/dp/B08YY?tag=your-affiliate-id"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg inline-block hover:bg-blue-700"
-              target="_blank" rel="noopener noreferrer"
-            >
-              Buy Now
-            </a>
-          </div>
+      {/* Products Section */}
+      <section id="products" className="py-16 px-6 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-12">Featured Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {products.map((product) => (
+            <div key={product.id} className="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-56 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold">{product.name}</h3>
+                <p className="text-gray-600 mb-2">{product.price}</p>
+                <p className="text-gray-600 mb-4">{product.description}</p>
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
+                >
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="bg-gray-100 py-16 px-6 text-center">
-        <h3 className="text-3xl font-bold mb-4">About Us</h3>
-        <p className="text-gray-700 max-w-2xl mx-auto">
-          We research and recommend the best affiliate products across tech, lifestyle, and home categories.
-          Our goal is to save you time and bring you only the most trusted items.
-        </p>
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-6 bg-gray-100 text-center">
+        <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+        <p className="text-lg text-gray-700">Got questions? Reach us at:</p>
+        <p className="text-indigo-600 font-semibold mt-2">support@affiliate-store.com</p>
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} Affiliate Hub. All rights reserved.</p>
-        <p className="mt-2">Follow us on 
-          <a href="#" className="text-blue-400 hover:underline ml-2">Twitter</a> |
-          <a href="#" className="text-blue-400 hover:underline ml-2">Instagram</a>
-        </p>
+      <footer className="bg-gray-900 text-white py-6 text-center mt-auto">
+        <p>&copy; {new Date().getFullYear()} My Affiliate Store. All rights reserved.</p>
       </footer>
     </div>
   );

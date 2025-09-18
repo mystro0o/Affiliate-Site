@@ -1,64 +1,56 @@
-import React from "react";
-
-// Example products with Amazon affiliate links
 const products = [
   {
     id: 1,
-    name: "Logitech G502 HERO Gaming Mouse",
-    price: "$39.99",
-    link: "https://www.amazon.com/dp/B07GBZ4Q68?tag=your-affiliate-id", // 👈 replace with your Amazon ID
-    img: "https://m.media-amazon.com/images/I/61mpMH5TzkL._AC_SL1500_.jpg",
+    name: "Wireless Headphones",
+    price: "$49.99",
+    img: "https://via.placeholder.com/300",
+    link: "https://www.amazon.com/dp/YOUR-AFFILIATE-LINK",
   },
   {
     id: 2,
-    name: "Redragon K552 Mechanical Keyboard",
-    price: "$34.99",
-    link: "https://www.amazon.com/dp/B016MAK38U?tag=your-affiliate-id", // 👈 replace
-    img: "https://m.media-amazon.com/images/I/71cngLX2xuL._AC_SL1500_.jpg",
+    name: "Smartwatch",
+    price: "$89.99",
+    img: "https://via.placeholder.com/300",
+    link: "https://www.amazon.com/dp/YOUR-AFFILIATE-LINK",
   },
   {
     id: 3,
-    name: "HyperX Cloud II Gaming Headset",
-    price: "$99.99",
-    link: "https://www.amazon.com/dp/B00SAYCXWG?tag=your-affiliate-id", // 👈 replace
-    img: "https://m.media-amazon.com/images/I/71Z49Jk-nsL._AC_SL1500_.jpg",
-  },
-  {
-    id: 4,
-    name: "ASUS TUF Gaming Monitor 27”",
-    price: "$189.99",
-    link: "https://www.amazon.com/dp/B0876M62V8?tag=your-affiliate-id", // 👈 replace
-    img: "https://m.media-amazon.com/images/I/81r1JcLm97L._AC_SL1500_.jpg",
+    name: "Gaming Mouse",
+    price: "$29.99",
+    img: "https://via.placeholder.com/300",
+    link: "https://www.amazon.com/dp/YOUR-AFFILIATE-LINK",
   },
 ];
 
-export default function ProductGrid() {
+export default function Products() {
   return (
-    <section className="py-10 px-6">
-      <h3 className="text-3xl font-bold text-center mb-8">Top Products</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="border rounded-lg shadow hover:shadow-xl transition p-4 text-center"
-          >
-            <img
-              src={product.img}
-              alt={product.name}
-              className="mx-auto mb-4 h-40 object-contain"
-            />
-            <h4 className="font-semibold">{product.name}</h4>
-            <p className="text-gray-600">{product.price}</p>
-            <a
-              href={product.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded font-semibold hover:bg-yellow-500"
+    <section id="products" className="py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          Featured Products
+        </h2>
+        <div className="grid gap-8 md:grid-cols-3">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transform transition"
             >
-              Buy Now
-            </a>
-          </div>
-        ))}
+              <img src={product.img} alt={product.name} className="w-full" />
+              <div className="p-4 text-center">
+                <h3 className="font-semibold text-lg">{product.name}</h3>
+                <p className="text-gray-600">{product.price}</p>
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                >
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
