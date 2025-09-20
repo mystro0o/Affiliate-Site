@@ -45,8 +45,8 @@ function App() {
       <section id="about" className="py-16 px-6 bg-gray-100 text-center">
         <h2 className="text-3xl font-bold mb-6">About Us</h2>
         <p className="max-w-3xl mx-auto text-gray-700 text-lg">
-          We bring you the best affiliate products at unbeatable prices.
-          Our mission is to help you discover high-quality deals without wasting time searching.
+          At Affinity Market, we connect you with hand-picked products from trusted brands and retailers. 
+                       Our goal is to make online shopping simple, reliable, and rewarding—helping you find the best value without the endless searching.
         </p>
       </section>
 
