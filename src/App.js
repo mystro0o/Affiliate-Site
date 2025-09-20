@@ -7,12 +7,19 @@ function App() {
       {/* Navbar */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 
-  className="text-2xl font-bold" 
-  style={{ color: "#FF9900" }}
->
-  Affinity Market
-</h1>
+          {/* Logo + Name */}
+          <div className="flex items-center space-x-2">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/34/34627.png"
+              alt="Logo"
+              className="h-8 w-8"
+            />
+            <h1 className="text-2xl font-extrabold text-orange-500">
+              Affinity <span className="text-black">Market</span>
+            </h1>
+          </div>
+
+          {/* Menu */}
           <ul className="hidden md:flex space-x-6 font-medium">
             <li><a href="#home" className="hover:text-indigo-600">Home</a></li>
             <li><a href="#about" className="hover:text-indigo-600">About</a></li>
@@ -21,30 +28,31 @@ function App() {
           </ul>
         </div>
       </nav>
-{/* Hero Section */}
-<section
-  className="relative bg-cover bg-center h-[600px] flex items-center justify-center text-white"
-  style={{
-    backgroundImage: "url('https://t3.ftcdn.net/jpg/09/47/24/02/360_F_947240266_vILwmKGTvRMeF5qUI3JdmafagYMSBj69.jpg')"
-  }}
->
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-  {/* Content */}
-  <div className="relative z-10 text-center max-w-2xl">
-    <h1 className="text-5xl font-extrabold mb-4">Shop Smarter with Us</h1>
-    <p className="text-lg mb-6">Discover exclusive deals on top products, carefully curated for you.</p>
-    <a
-      href="#products"
-      className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-500 transition"
-    >
-      Shop Now
-    </a>
-  </div>
-</section>
+      {/* Hero Section */}
+      <section
+        className="relative bg-cover bg-center h-[600px] flex items-center justify-center text-white"
+        style={{
+          backgroundImage: "url('https://t3.ftcdn.net/jpg/09/47/24/02/360_F_947240266_vILwmKGTvRMeF5qUI3JdmafagYMSBj69.jpg')"
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-2xl">
+          <h1 className="text-5xl font-extrabold mb-4">Shop Smarter with Us</h1>
+          <p className="text-lg mb-6">
+            Discover exclusive deals on top products, carefully curated for you.
+          </p>
+          <a
+            href="#products"
+            className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-500 transition"
+          >
+            Shop Now
+          </a>
+        </div>
+      </section>
 
       {/* About Section */}
       <section id="about" className="py-16 px-6 bg-gray-100 text-center">
@@ -60,7 +68,10 @@ function App() {
         <h2 className="text-3xl font-bold text-center mb-12">Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {products.map((product) => (
-            <div key={product.id} className="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <div
+              key={product.id}
+              className="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+            >
               <img
                 src={product.image}
                 alt={product.name}
@@ -93,7 +104,7 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-6 text-center mt-auto">
-        <p>&copy; {new Date().getFullYear()} My Affiliate Store. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Affinity Market. All rights reserved.</p>
       </footer>
     </div>
   );
