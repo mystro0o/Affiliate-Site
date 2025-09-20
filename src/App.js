@@ -41,9 +41,9 @@ function App() {
 
         {/* Content */}
         <div className="relative z-10 text-center max-w-2xl">
-          <h1 className="text-5xl font-extrabold mb-4">Shop Smarter with Us</h1>
+          <h1 className="text-5xl font-extrabold mb-4">Where Smart Choices Meet Lasting Value</h1>
           <p className="text-lg mb-6">
-            Discover exclusive deals on top products, carefully curated for you.
+            Explore exclusive offers on premium products, thoughtfully selected to bring you the best value.
           </p>
           <a
             href="#products"
