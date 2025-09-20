@@ -46,7 +46,7 @@ function App() {
         <h2 className="text-3xl font-bold mb-6">About Us</h2>
         <p className="max-w-3xl mx-auto text-gray-700 text-lg">
           At Affinity Market, we connect you with hand-picked products from trusted brands and retailers. 
-                       Our goal is to make online shopping simple, reliable, and rewarding—helping you find the best value without the endless searching.
+          Our goal is to make online shopping simple, reliable, and rewarding—helping you find the best value without the endless searching.
         </p>
       </section>
 
