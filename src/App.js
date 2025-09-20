@@ -7,7 +7,12 @@ function App() {
       {/* Navbar */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-indigo-600">Affinity Market</h1>
+          <h1 
+  className="text-2xl font-bold" 
+  style={{ color: "#FF9900" }}
+>
+  Affinity Market
+</h1>
           <ul className="hidden md:flex space-x-6 font-medium">
             <li><a href="#home" className="hover:text-indigo-600">Home</a></li>
             <li><a href="#about" className="hover:text-indigo-600">About</a></li>
