@@ -75,7 +75,7 @@ function App() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-56 object-cover"
+                className="w-full h-64 object-contain bg-white p-4"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold">{product.name}</h3>
